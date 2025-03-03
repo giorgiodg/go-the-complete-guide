@@ -1,0 +1,3 @@
+EBT: 50
+Profit: 38
+Ratio   1
