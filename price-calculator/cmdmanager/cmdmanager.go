@@ -5,10 +5,11 @@ import "fmt"
 type CMDManager struct {
 }
 
-func (cm CMDManager) ReadLines() ([]string, error) {
-	fmt.Println("Please enter your prices. Confirm your prices with ENTER")
+func (cmd CMDManager) ReadLines() ([]string, error) {
+	fmt.Println("Please enter your prices. Confirm every price with ENTER")
 
 	var prices []string
+
 	for {
 		var price string
 		fmt.Print("Price: ")
@@ -19,10 +20,11 @@ func (cm CMDManager) ReadLines() ([]string, error) {
 		}
 		prices = append(prices, price)
 	}
+
 	return prices, nil
 }
 
-func (cm CMDManager) WriteContent(data interface{}) error {
+func (cmd CMDManager) WriteResult(data interface{}) error {
 	fmt.Println(data)
 	return nil
 }
